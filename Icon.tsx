@@ -1,5 +1,5 @@
 import React from "react";
-import { Icons, IconNames } from "./Icons";
+import { IconNames, Icons } from "./Icons";
 
 interface IconProperties {
 
@@ -17,11 +17,11 @@ interface IconProperties {
     
     stroke?: string;
 
-    strokeWidth?: string;
+    strokeWidth?: string
 
-    strokeLinecap?: string;
+    strokeLinecap?: "butt" | "round" | "square" | "inherit" | undefined;
 
-    strokeLinejoin?: string;
+    strokeLinejoin?: "miter" | "round" | "bevel" | "inherit" | undefined;
 
     size?: '16' | '24' | '32' | '40';
 
@@ -29,7 +29,7 @@ interface IconProperties {
 }
 
 const Icon: React.FC<IconProperties> = ({ viewBox, title, size, name, stroke, strokeWidth, strokeLinecap, strokeLinejoin, ...props }) => (
-    <svg width={size} height={size} viewBox={viewBox} {...props}>
+    <svg width={size} height={size} viewBox={viewBox} stroke={stroke} strokeWidth={strokeWidth} strokeLinecap={strokeLinecap} strokeLinejoin={strokeLinejoin} {...props}>
         {title &&
             <title>{title}</title>
         }
@@ -38,7 +38,7 @@ const Icon: React.FC<IconProperties> = ({ viewBox, title, size, name, stroke, st
 );
 
 Icon.defaultProps = {
-    viewBox: "0 0 16 16",
+    viewBox: "0 0 24 24",
     size: "16",
     role: "img",
     fill: "none",
