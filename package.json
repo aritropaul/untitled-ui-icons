@@ -1,6 +1,6 @@
 {
   "name": "untitled-ui-icons",
-  "version": "1.0.10",
+  "version": "1.0.13",
   "scripts": {
     "build": "NODE_ENV=production node scripts/build.js",
     "release": "NODE_ENV=production node scripts/release.js"

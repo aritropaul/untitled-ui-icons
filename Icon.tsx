@@ -1,7 +1,7 @@
 import React from "react";
 import { IconNames, Icons } from "./Icons";
 
-interface IconProperties {
+type IconProperties = {
 
     className?: string;
     
